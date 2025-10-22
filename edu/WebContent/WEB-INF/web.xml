@@ -22,4 +22,37 @@
   	<url-pattern>/addInfo/*</url-pattern> <!-- http://localhost:8080/edu/addinfo 로 시작하는 조건만 만족한다면 서블릿을 실행하라 --> 
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>initParam</servlet-name>
+  	<servlet-class>com.edu.test.InitParamServlet</servlet-class>
+  	<init-param>
+  		<param-name>id</param-name>
+  		<param-value>guest</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>password</param-name>
+  		<param-value>1004</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>initParam</servlet-name>
+  	<url-pattern>/initParamTest</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>servletConfigTest</servlet-name>
+  	<servlet-class>com.edu.test.ServletConfigTestServlet</servlet-class>
+  	<init-param>
+  		<param-name>charset</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletConfigTest</servlet-name>
+  	<url-pattern>/servletConfigTest</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
