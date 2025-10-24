@@ -20,7 +20,7 @@ public class SessionTestServlet extends HttpServlet {
 		String msg = null;
 		HttpSession session = null;
 		
-		// getSession(); -> 기존 세션 객체가 있는지 없는지를 기준으로 있으면 기존 객체 반환, 없으면 true는 새로운 객체 생성, false는 null 반환
+		// getSession(); -> 기존 세션 객체가 있는지 없는지를 기준으로 있으면 기존 객체를 반환하고 없다면 true는 새로운 객체 생성, false는 null 반환
 		// -> default 값이 getSession(true); 임
 		
 		if (param.equals("create")) {
