@@ -21,7 +21,8 @@ public class DispatcherTest1Servlet extends HttpServlet {
 		
 		ServletContext sc = this.getServletContext();
 		RequestDispatcher rd = sc.getRequestDispatcher("/dispatcher2");
-		rd.forward(req, resp);
+//		rd.forward(req, resp);
+		rd.include(req, resp); // 다른 페이지를 현재 페이지에 글자 그대로 포함하는 효과
 		
 		out.close();
 	}
