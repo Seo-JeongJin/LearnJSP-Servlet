@@ -17,6 +17,26 @@
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping> -->
   
+	<!-- 작성된 순서대로 조건을 검사하여 필터 실행 -->
+  <filter>
+  	<filter-name>flow1</filter-name>
+  	<filter-class>com.edu.test.FlowFilterOne</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>flow2</filter-name>
+  	<filter-class>com.edu.test.FlowFilterTwo</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>flow1</filter-name>
+  	<url-pattern>/second</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>flow2</filter-name>
+  	<url-pattern>/*</url-pattern> <!-- 현재 웹 앱의 모든 요청을 필터링하겠다는 의미 -->
+  </filter-mapping>
+  
   <servlet>
   	<servlet-name>addInfo</servlet-name>
   	<servlet-class>com.edu.test.AdditionalInfoServlet</servlet-class>
